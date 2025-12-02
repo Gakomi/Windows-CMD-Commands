@@ -1,0 +1,5 @@
+sc stop DiagTrack
+sc config DiagTrack start= disabled
+sc stop dmwappushservice
+sc config dmwappushservice start= disabled
+https://github.com/Raphire/Win11Debloat
