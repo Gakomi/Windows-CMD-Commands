@@ -1,0 +1,3 @@
+winget search "app-name"
+winget install "app-name"
+
