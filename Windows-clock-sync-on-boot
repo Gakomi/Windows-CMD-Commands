@@ -1,0 +1,6 @@
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /t REG_DWORD /d 1 /f
+schtasks /create /tn "TimeSyncAtBoot" /sc onstart /tr "w32tm /resync" /ru SYSTEM
+
+net start w32time
+w32tm /config /manualpeerlist:"time.windows.com" /syncfromflags:manual /update
+w32tm /resync
